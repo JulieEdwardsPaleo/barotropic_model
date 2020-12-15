@@ -12,3 +12,9 @@ Linearized, this equation is:
 > <img src="readmeimages/Eqn3.gif" /> 
 Since we want to solve for the vorticity tendancy, we want to set everything to the right side of the equation:
 > <img src="readmeimages/Eqn4.gif" /> 
+
+## 3. Code Documentation
+### a. Code structure
+The main script where we're solving the equations from **Section 2** is **barotropic.py**. This script initializes all the variables we need and the linear dynamics (nonlinear dyamics pending). This script also includes plot and output saving and diagnostics. **forcing.py** is where we set up the topographic forcing. The 'simple' topography (*topography_simple*) is created by a gaussian function. The 'real' topography (*topography_real*) is read in from a file using a function from **xarray_IO.py**. **xarray_OI.py** contains functions fro reading in netCDFs, creating variables and dimenstions for output netCDFs, and eventually writing the netCDF output. 
+
+(3a) Description of code structure and what different model components do, e.g.: namelist, spectral, netcdf_IO, plotting, barotropic, etc -- good to include a flow diagram of the code), time stepping, I/O interface, etc.
