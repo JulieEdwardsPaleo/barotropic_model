@@ -20,7 +20,12 @@ The main script where we're solving the equations from **Section 2** is **barotr
 
 ## 4. Code Walkthrough
 To run the code as is, just run **runscript.py**. We only coded out the linear dynamics but once we code out the nonlinear dynamics you can specify this in the **runscript.py** on line 18
-model.integrate_linear_dynamics()  or model.integrate_nonlinear_dynamics()
+
+*model.integrate_linear_dynamics()*  or  *model.integrate_nonlinear_dynamics()*
+
+To change the 'real' topography field change *dfile_topo* in the **namelist.py**. The main veriables you should be changing in **namelist.py** are *topo_case* depending out which topography you want to use (real or simple), the *plot_freq* and *output_freq* variables for how often you want plot and data output. You could also change the location of the 'simple' topography with *topo_clatd* and *topo_clond*. 
+
+For diagnostic plotting of variables at the final time step uncomment: lines 202 and 203
 
 
 
