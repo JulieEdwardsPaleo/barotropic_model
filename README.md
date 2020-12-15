@@ -1,7 +1,7 @@
 # barotropic_model READ ME
 
 ## 1. Introduction
-The purpose of this project is to create an atmosphere toy model to solve barotropic vorticity equations. It has several different settings which can be modified, such as using linear or nonlinear dynamics, different forcing scenarios, etc... I only coded out the linear dynamics and made an attempt at nonlinear dynamics and we only coded out topographic forcing but we could have added thermal forcing too. For the topogrpahic forcing you have the option to use 'real' or 'simple' topography, which will be described in more detail in **Section 3**. One main goal of this code is to see how well we can replicate the orographically-forced modeled streamfunction of more complex models. Even the first ever computer circulation model does a pretty amazing job at matching the real meridional mean stream function. Solving for vorticity is key to modelling Rossby waves, which are a key feature of the climate system. 
+The purpose of this project is to create an atmosphere toy model to solve barotropic vorticity equations. It has several different settings which can be modified, such as using linear or nonlinear dynamics, different forcing scenarios, etc... I only coded out the linear dynamics and made an attempt at nonlinear dynamics and we only coded out topographic forcing but we could have added thermal forcing too. For the topogrpahic forcing you have the option to use 'real' or 'simple' topography, which will be described in more detail in **Section 3**. One main goal of this code is to see how well we can replicate the orographically-forced modeled stream function of more complex models. Even the first ever computer circulation model does a pretty amazing job at matching the real meridional mean stream function. Solving for vorticity is key to modelling Rossby waves, which are a key feature of the climate system. 
 
 ## 2. Model Dynamics
 To spatially solve for vorticity, we're using spherical harmonics through the **windspharm** Python package. One disadvantage of spectral methods is the presence of Gibbs osciallations, which are apparent in the topography field. Then for time integration we're mostly using a forward scheme and switching to a centered scheme every 20 steps, as determined by the variable *forward* in **namelist.py**. To code up the equations we will be solving, first we start out with the absolute vorticity tendancy set to zero:
@@ -26,7 +26,26 @@ To change the 'real' topography field change *dfile_topo* in the **namelist.py**
 For diagnostic plotting of variables at the final time step uncomment: lines 202 and 203 in **barotropic.py**
 
 ## 5. Example Output
-> <img src="figures/psip71.pdf"/> 
+This is an example of a streamfunction plot at time-step 71:
+> <img src="readmeimages/output.png"/> 
+Our model does a pretty good job in the Northern Hemisphere matching the orographically-forced model in Held et al., (2002) but our stream function patterns aren't as angles as gthe ones in Fig. 2b in Held et al., (2002). In the real world, it seems like the most positive and negative areas of the streamfunction are more over the oceans, so maybe having only an atmospheric component and not having any thermal forcing in our toy model is why the toy model results don't match reality. 
+
+## 6. Future Improvements
+
+1. Add nonlinear dynamics 
+2. Add thermal forcing
+
+## 7. Reflections
+
+This was my first time seriously coding in Python and also my first real introduction to classes and object oriented programming. I've also edited code that other people have written before in Javascript so I had a vague understanding of how classes and object oriented coding worked. This project definitely solidified my understanding of object oriented programming, but I still want to spend more time on understanding the logic behind it and get to the point where I could teach someone else about it. Going back to the very basics of the math behind how climate works is also always a worthwhile excercise. Just like object oriented programming, before this project I had a vague understanding of what a stream function is. I learn best by doing so after coding it out I now have a better understand why it's important to atmospheric circulation. In the future I might be doing some data assimilation for my research and I hope what I've learned here will be helpful for that. I'd also like to eventually run my own experiments on complex GCMs like CESM. Even though it seems like they mostly use Fortran, this project has made me more knowledgable about how the code for models can be structured.
+
+
+
+
+
+
+
+Held, Isaac M., et al. “Northern Winter Stationary Waves: Theory and Modeling.” Journal of Climate, vol. 15, no. 16, 2002, pp. 2125–2144. JSTOR, www.jstor.org/stable/26249392. Accessed 15 Dec. 2020.
 
 
 
