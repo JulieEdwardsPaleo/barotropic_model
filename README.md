@@ -6,4 +6,4 @@ The purpose of this project is to create an atmosphere toy model to solve barotr
 ## 2. Model Dynamics
 To spatially solve for vorticity, we're using spherical harmonics through the **windspharm** Python package. One disadvantage of spectral methods is the presence of Gibbs osciallations, which are apparent in the topography field. Then for time integration we're mostly using a forward scheme and switching to a centered scheme every 20 steps, as determined by the variable *forward* in **namelist.py**. 
 
-- <img src="CodeCogsEqn.gif" /> 
+- <img src="readmeimages/Eqn1.gif" /> 
