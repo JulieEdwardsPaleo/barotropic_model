@@ -26,9 +26,9 @@ To change the 'real' topography field change *dfile_topo* in the **namelist.py**
 For diagnostic plotting of variables at the final time step uncomment: lines 202 and 203 in **barotropic.py**
 
 ## 5. Example Output
-This is an example of a streamfunction plot at time-step 71:
+This is an example of a streamfunction plot at time-step 71 using real topography:
 > <img src="readmeimages/output.png"/> 
-Our model does a pretty good job in the Northern Hemisphere matching the orographically-forced model in Held et al., (2002) but our stream function patterns aren't as angles as gthe ones in Fig. 2b in Held et al., (2002). In the real world, it seems like the most positive and negative areas of the streamfunction are more over the oceans, so maybe having only an atmospheric component and not having any thermal forcing in our toy model is why the toy model results don't match reality. 
+(The units should be in m2/s, this image was created as a test and had placeholder units). Our model does a pretty good job in the Northern Hemisphere matching the orographically-forced model in Held et al., (2002) but our stream function patterns aren't as angles as gthe ones in Fig. 2b in Held et al., (2002). In the real world, it seems like the most positive and negative areas of the streamfunction are more over the oceans, so maybe having only an atmospheric component and not having any thermal forcing in our toy model is why the toy model results don't match reality. 
 
 ## 6. Future Improvements
 
