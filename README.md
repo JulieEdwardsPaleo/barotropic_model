@@ -10,3 +10,5 @@ This equation is then expanded into:
 > <img src="readmeimages/Eqn2.gif" /> 
 Linearized, this equation is:
 > <img src="readmeimages/Eqn3.gif" /> 
+Since we want to solve for the vorticity tendancy, we want to set everything to the right side of the equation:
+> <img src="readmeimages/Eqn4.gif" /> 
