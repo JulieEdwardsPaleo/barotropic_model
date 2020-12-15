@@ -26,7 +26,7 @@ To change the 'real' topography field change *dfile_topo* in the **namelist.py**
 For diagnostic plotting of variables at the final time step uncomment: lines 202 and 203 in **barotropic.py**
 
 ## 5. Example Output
-> <img src="figures/psip71.pdf" /> 
+> <img src="figures/psip71.pdf"/> 
 
 
 
