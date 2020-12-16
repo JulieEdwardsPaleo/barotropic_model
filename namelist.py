@@ -13,9 +13,10 @@ import forcing
 
 
 # Time stepping
-nsteps = 100        # Number of time steps to integrate
-dt = 10.*60.         # Timestep (seconds)
-forward= 20             # when to switch to centered time step scheme
+nsteps = 1000       # Number of time steps to integrate
+dt = 20.*60.       # Timestep (seconds)
+nforward = 20      # Forward step every # timesteps
+
 tau=5.*86400. #for friction : 5 days
 
 # Spectral operators
