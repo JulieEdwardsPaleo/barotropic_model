@@ -34,6 +34,7 @@ This is an example of a streamfunction plot at time-step 71 using real topograph
 
 1. Add nonlinear dynamics 
 2. Add thermal forcing
+3. Add diffusion
 
 ## 7. Reflections
 
