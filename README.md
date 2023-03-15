@@ -36,11 +36,7 @@ This is an example of a streamfunction plot at time-step 71 using real topograph
 2. Add thermal forcing
 3. Add diffusion
 
-## 7. Reflections
-
-This was my first time seriously coding in Python and also my first real introduction to classes and object oriented programming. I've also edited code that other people have written before in Javascript so I had a vague understanding of how classes and object oriented coding worked. This project definitely solidified my understanding of object oriented programming, but I still want to spend more time on understanding the logic behind it and get to the point where I could teach someone else about it. Going back to the very basics of the math behind how climate works is also always a worthwhile excercise. Just like object oriented programming, before this project I had a vague understanding of what a stream function is. I learn best by doing so after coding it out I now have a better understand why it's important to atmospheric circulation. In the future I might be doing some data assimilation for my research and I hope what I've learned here will be helpful for that. I'd also like to eventually run my own experiments on complex GCMs like CESM. Even though it seems like they mostly use Fortran, this project has made me more knowledgable about how the code for models can be structured.
-
-
+## 7. References
 
 
 
